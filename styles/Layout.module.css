@@ -1,0 +1,9 @@
+.container {
+    min-height: 100vh;
+    height: 100%;
+  }
+  
+  .main {
+    align-items: center;
+    font-size: 1.25rem;
+  }
