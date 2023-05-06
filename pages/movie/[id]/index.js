@@ -33,6 +33,7 @@ const Movie = ({ result }) => {
     const [rating, setRating] = useState(0);
     const [err, setErr] = useState("");
     const ratingRef = useRef()
+    const isDesktop = useBreakpointValue({ base: false, md: true, lg: true })
 
     useEffect(()=> {
         if(localStorage.getItem('my_bookmarks')) {
@@ -118,14 +119,14 @@ const Movie = ({ result }) => {
             <>
                 <Flex
             w="full"
-            px={useBreakpointValue({ base: 6, md: 15})}
+            px={isDesktop? 15: 6}
             pt={'4em'}
             justifyContent="space-between"
-            flexDirection={useBreakpointValue({ base: 'column', md: 'row'})}
+            flexDirection={isDesktop? 'row' : 'column'}
         >
-            <Box mr={useBreakpointValue({ base: 0, md: 6})} w={useBreakpointValue({ base: 'full', md: '60%'})}>
+            <Box mr={isDesktop? 6 : 0} w={isDesktop? '60%' : 'full'}>
                 <Text
-                    fontSize={useBreakpointValue({ base: '3xl', md: '4xl'})}
+                    fontSize={isDesktop? '4xl' : '3xl'}
                     fontWeight="bold"
                     mt={3}
                 >
@@ -190,7 +191,7 @@ const Movie = ({ result }) => {
             </Box>
             <Spacer />
                 <Flex
-                    w={useBreakpointValue({ base: 'full', md: '40%'})}
+                    w={isDesktop? '40%' : 'full'}
                     alignItems="center"
                     justifyContent="center"
                     flexDirection={'column'}
@@ -210,9 +211,9 @@ const Movie = ({ result }) => {
                     </Center>
             </Flex>
         </Flex>
-        <Stack px={useBreakpointValue({ base: 6, md: 15})} w={useBreakpointValue({ base: 'full', md: '60%'})}>
+        <Stack px={isDesktop? 15: 6} w={isDesktop? '60%' : 'full'}>
             <Text
-                fontSize={useBreakpointValue({ base: 'lg', md: '2xl'})}
+                fontSize={isDesktop? '2xl' : 'lg'}
                 fontWeight="bold"
                 mt={3}
             >
@@ -257,8 +258,8 @@ const Movie = ({ result }) => {
         </Stack>
             </>
         :
-        <Stack px={useBreakpointValue({ base: 6, md: 15})} pt={'4em'}>
-            <Text fontWeight={700} lineHeight={1.2} fontSize={useBreakpointValue({ base: '1xl', md: '2xl' })}>
+        <Stack px={isDesktop? 15 : 6} pt={'4em'}>
+            <Text fontWeight={700} lineHeight={1.2} fontSize={isDesktop? '2xl' : '1xl'}>
                 cannot find movie
             </Text>
         </Stack>
