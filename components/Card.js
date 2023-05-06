@@ -48,7 +48,7 @@ export default function Card({ poster, name, year, _id, type="search", bookmarks
                                 <CheckIcon />
                             </Text>
                             <Text fontSize={'md'} color="lightgray" fontWeight={'bold'} mx={2}>
-                                watched
+                                Watched
                             </Text>
                         </Flex>
                     </Box>

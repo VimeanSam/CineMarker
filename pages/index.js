@@ -77,7 +77,7 @@ export default function Home() {
             <Container maxW='4xl' centerContent>
               <Box padding='4' color='white' maxW='2xl'>
                 <Text fontSize={useBreakpointValue({ base: 'md', md: 'md' })}>
-                Can't remember what movie you want to watch Friday night? <b>Cinemarker</b> is an application that allows user to search for movie by title and bookmark them.
+                Cannot remember what movie you want to watch Friday night? <b>Cinemarker</b> is an application that allows user to search for movie by title and bookmark them.
                 Once bookmarked, the user can view, review, marked as watched, and remove the movie from the bookmark list. 
                 </Text>
               </Box>

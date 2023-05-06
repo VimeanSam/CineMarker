@@ -23,7 +23,7 @@ const Nav = ({navItems, path}) =>{
   const isDesktop = useBreakpointValue({ base: false, lg: true })
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  console.log(path)
+  // console.log(path)
   return(
       <>
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'} as="header" position="fixed" w="100%" color={"white"} padding={"1em"} background={path !== "/" ? "#A52A2A" : "transparent"} zIndex={2}>

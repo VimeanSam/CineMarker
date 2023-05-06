@@ -19,7 +19,7 @@ import { useState, useEffect } from "react";
 import Card from "../components/Card";
 
 
-const bookmarks = () =>{
+const Bookmarks = () =>{
     const [bookmarks, setBookmarks] = useState([]);
     const[bookmarksMap, setBookmarkMap] = useState({});
 
@@ -79,4 +79,4 @@ const bookmarks = () =>{
     )
 }
 
-export default bookmarks
+export default Bookmarks

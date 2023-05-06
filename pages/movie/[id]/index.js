@@ -22,7 +22,7 @@ import { useState, useEffect, useRef} from "react";
 
 const axios = require('axios');
 
-const movie = ({ result }) => {
+const Movie = ({ result }) => {
     const router = useRouter()
     const { id } = router.query
     const movie = result.Response === "True"? result : {}
@@ -281,4 +281,4 @@ export const getServerSideProps = async (context) => {
 }
 
 
-export default movie
+export default Movie

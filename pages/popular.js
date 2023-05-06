@@ -22,8 +22,8 @@ import { useState, useEffect } from "react";
 
 const axios = require('axios');
 
-const popular = ({ movies }) => {
-    console.log(movies)
+const Popular = ({ movies }) => {
+    // console.log(movies)
     const [bookmarks, setBookmarks] = useState([]);
 
     useEffect(()=> {
@@ -90,4 +90,4 @@ export const getServerSideProps = async (context) => {
     }
 }
 
-export default popular
+export default Popular
