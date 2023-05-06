@@ -113,7 +113,7 @@ const Movie = ({ result }) => {
     return (
         <>
          <Head>
-            <title>{id}</title>
+            <title>{result.Title}</title>
         </Head>
         {Object.keys(movie).length > 0? 
             <>

@@ -56,25 +56,33 @@ const Bookmarks = () =>{
                 <title>My Bookmarks</title>
             </Head>
             <Stack w={'full'}  px={4} py={"4em"}>
-            <Text fontWeight={700} lineHeight={1.2} fontSize={useBreakpointValue({ base: '1xl', md: '2xl' })}>
-                My Bookmarks
-            </Text>
-            <SimpleGrid minChildWidth="300px" spacing="10" minH="full" gridTemplateColumns={"repeat(auto-fit, minmax(300px, 0.1fr))"} justifyContent={useBreakpointValue({ base: 'center', md: 'flex-start' })}>
-            {bookmarks.map((film_id, index) => (
-                <Link href={`/movie/${bookmarksMap[film_id]._id}`} style={{textDecoration: 'none'}} key={index}>
-                <Card
-                    _id={bookmarksMap[film_id]._id}
-                    name={bookmarksMap[film_id].name}
-                    poster={bookmarksMap[film_id].poster}
-                    year={bookmarksMap[film_id].year}
-                    type={"bookmark"}
-                    remove={remove}
-                    watched={bookmarksMap[film_id].watched}
-                />
-                </Link>
-            ))}
-            </SimpleGrid>
-        </Stack>
+                <Text fontWeight={700} lineHeight={1.2} fontSize={useBreakpointValue({ base: '1xl', md: '2xl' })}>
+                    My Bookmarks
+                </Text>
+                <SimpleGrid minChildWidth="300px" spacing="10" minH="full" gridTemplateColumns={"repeat(auto-fit, minmax(300px, 0.1fr))"} justifyContent={useBreakpointValue({ base: 'center', md: 'flex-start' })}>
+                {bookmarks.map((film_id, index) => (
+                    <Link href={`/movie/${bookmarksMap[film_id]._id}`} style={{textDecoration: 'none'}} key={index}>
+                    <Card
+                        _id={bookmarksMap[film_id]._id}
+                        name={bookmarksMap[film_id].name}
+                        poster={bookmarksMap[film_id].poster}
+                        year={bookmarksMap[film_id].year}
+                        type={"bookmark"}
+                        remove={remove}
+                        watched={bookmarksMap[film_id].watched}
+                    />
+                    </Link>
+                ))}
+                </SimpleGrid>
+                {bookmarks.length < 1 &&   
+                    <Stack px={6} pt={'4em'}>
+                        <Text fontWeight={600} lineHeight={1.2} fontSize={'lg'}>
+                            You have no bookmarks at the moment
+                        </Text>
+                    </Stack>    
+                }
+            </Stack>
+       
         </>
     )
 }
