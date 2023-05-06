@@ -75,8 +75,8 @@ const Bookmarks = () =>{
                 ))}
                 </SimpleGrid>
                 {bookmarks.length < 1 &&   
-                    <Stack px={6} pt={'4em'}>
-                        <Text fontWeight={600} lineHeight={1.2} fontSize={'lg'}>
+                    <Stack pt={2}>
+                        <Text fontWeight={500} lineHeight={1.2} fontSize={'lg'}>
                             You have no bookmarks at the moment
                         </Text>
                     </Stack>    
